@@ -5,12 +5,15 @@ const ingredients = [
     "Tomatos",
     "Herbs",
     "Condiments",
-  ]
+]
 
 const list = document.querySelector('#ingredients')
+const lis = []
 
 for (let ingridient of ingredients) {
     let li = document.createElement('li')
     li.textContent = ingridient
-    list.append(li)
+    lis.push(li.outerHTML)
 }
+
+list.insertAdjacentHTML('afterbegin', lis.join(''))

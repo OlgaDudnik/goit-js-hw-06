@@ -36,8 +36,9 @@ function createBoxes(amount) {
         div.style.height = currentWidthHeight + 'px'
         div.style.backgroundColor = getRandomHexColor()
 
-        divs.push(div)
-
-        boxes.append(div)
+        divs.push(div.outerHTML)
     }
+
+    boxes.insertAdjacentHTML('afterbegin', divs.join(''))
+    input.value = 0
 }

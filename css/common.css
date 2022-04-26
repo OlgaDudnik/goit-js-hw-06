@@ -18,6 +18,10 @@ input {
   font: inherit;
 }
 
+span#text {
+  font-size: 58px;
+}
+
 button {
   padding: 8px 12px;
   cursor: pointer;
